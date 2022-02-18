@@ -1,0 +1,16 @@
+@import '../../colors.scss';
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: $primaryColor;
+    color: azure;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    div{
+        span{
+            margin: 2em;
+        }
+    }
+}
