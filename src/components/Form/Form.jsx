@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
+import "./Form.scss";
 import {useNavigate} from 'react-router-dom';
 export const Form = () => {
+
 let navigate = useNavigate();
 const [data, setData] = useState({
     title: "",
@@ -8,12 +10,14 @@ const [data, setData] = useState({
     subcategory: "",
     abstract: ""
 });
+
 const handleInputChange = (event) => {
     setData({
         ...data,
         [event.target.name] : event.target.value
     });
 };
+
 const handleSubmit = (event) =>{
     event.preventDefault();
     console.log("Enviando datos... "+data.title+" " + data.section + " " + data.subcategory + " " + data.abstract);

@@ -1,21 +1,22 @@
-import React from "react";
 import "./Header.scss";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <nav className="header">
-      <span>Header</span>
-      <div>
-        <span>
+    <div className="header sticky">
+      <span>SPORTS</span>
+      <span className="menu">Menu</span>
+      <span>
           <Link to="/">Home</Link>
-        </span>
-        <span>
-          <Link to="/user">UserForm</Link>
-        </span>
-      </div>
-    </nav>
+      </span>
+      <span>
+          <Link to="/form">Form</Link>
+      </span>
+      <span>
+          <Link to="/news">News</Link>
+      </span>
+    </div>
   );
 };
 
-export default Header
+export default Header;

@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './components/Header/Header';
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header/Header";
+import Home from "./components/Home/Home";
+import Form from "./components/Form/Form";
+import News from "./components/News/News";
+import { GlobalProvider } from "./context/GlobalState";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   return (
+    <GlobalProvider>
     <div className="App">
       <Router>
-      <Header/>
-      <routes>
-        //rutas de los componentes
-        
-      </routes>
-      <footer className="App-header">
-        <p>
-          App made with <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">React.js</a> <img src={logo} className="App-logo" alt="logo" />
-        </p>
-      </footer>
+        <Header/>
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/form" element={<Form/>} />
+            <Route path="/news" element={<News/>} />
+          </Routes>
+        </div>
       </Router>
     </div>
+    </GlobalProvider>
   );
 }
+
 export default App;
