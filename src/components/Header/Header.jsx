@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header sticky">
-      <span>SPORTS</span>
+      <span>Tech News</span>
       <span className="menu">Menu</span>
       <span>
           <Link to="/">Home</Link>
