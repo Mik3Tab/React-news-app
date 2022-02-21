@@ -1,21 +1,36 @@
 @import '../../colors.scss';
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+h2{
+    font-family: 'Source Sans Pro';
+}
 form{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 30%;
     min-height: 30vh;
-    margin: 5em;
-    background-color: grey;
+    margin-top: 7em;
+    background-color: rgb(236, 231, 231);
     padding: 1em;
     border-radius: 5px;
-    height: 60vh;
-    box-shadow: 2px 2px 5px black;
+    height: 70vh;
+    box-shadow:4px 4px 5px $shadowColor;
+
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    @-webkit-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
 }
 form input{
     all: unset;
-    background-color: #9856b1;
+    background-color: #c9a6d6;
     padding: 1em;
     border: 1px solid black;
     border-radius: 5px;
@@ -23,10 +38,20 @@ form input{
 }
 form button{
     all: unset;
-    background-color: #653477;
+    background-color: $primaryColor;
     padding: 1em;
+    margin-top: 30px;
     border-radius: 1em;
     color: white;
+    cursor:pointer;
+    border: 1px solid black;
+}
+form button:hover{
+    background-color: $hoverColor;
+    transition: ease-in-out 150ms;
+}
+label{
+    text-align: left;
 }
 .form_container{
     display: flex;

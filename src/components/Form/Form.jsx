@@ -20,25 +20,28 @@ const handleInputChange = (event) => {
 
 const handleSubmit = (event) =>{
     event.preventDefault();
-    console.log("Enviando datos... "+data.title+" " + data.section + " " + data.subcategory + " " + data.abstract);
+    console.log("Enviando datos... "+data.title+" " + data.section + " " + data.subsection + " " + data.abstract);
     setTimeout(()=>{
-        navigate("/");
+        navigate("/News");
     }, 1000);
-    let db  = JSON.parse(localStorage.getitem('myForm'))||[];
     let title = data.title;
     let section = data.section;
-    let subcategory = data.subcategory;
+    let subsection = data.subsection;
     let abstract = data.abstract;
-    const info = {title, section,subcategory,abstract};
-    db.push(info);
-    localStorage.setItem('myForm', JSON.stringify(db))
+    const info = {title, section,subsection,abstract};
+    localStorage.setItem('myForm', JSON.stringify(info))
     }
     return(
         <div className="form_container">
             <form id="myform" onSubmit={handleSubmit}>
-               <input type="text" onChange={handleInputChange} name="title" id="title" placeholder="titulo"/>
+                <h2>Crea tu post</h2>
+                <label>Titulo</label>
+               <input type="text" onChange={handleInputChange} name="title" id="title"/>
+               <label>Sección</label>
                <input type="text" onChange={handleInputChange} name="section" id="section"/>
+               <label>Subsección</label>
                <input type="text" onChange={handleInputChange} name="subsection" id="subsection"/>
+               <label>Contenido de la noticia</label>
                <input type="text" onChange={handleInputChange} name="abstract" id="abstract"/> 
                <button type="submit">Enviar</button>
             </form>

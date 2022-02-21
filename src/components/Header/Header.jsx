@@ -4,17 +4,19 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header sticky">
-      <span>Tech News</span>
-      <span className="menu">Menu</span>
-      <span>
-          <Link to="/">Home</Link>
-      </span>
-      <span>
-          <Link to="/form">Form</Link>
-      </span>
-      <span>
-          <Link to="/news">News</Link>
-      </span>
+<section class="section">
+    <ul class="menu">
+      <li class="menu__item">
+        <a href="#0" class="menu__link hover9"><span class="menu__label hover9__label"> <Link to="/">Home</Link></span></a>
+      </li>	
+      <li class="menu__item">
+        <a href="#0" class="menu__link hover9"><span class="menu__label hover9__label"> <Link to="/form">Form</Link></span></a>
+      </li>	
+      <li class="menu__item">
+        <a href="#0" class="menu__link hover9"><span class="menu__label hover9__label"><Link to="/news">News</Link></span></a>
+      </li>	
+    </ul>
+  </section>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 @import '../../colors.scss';
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 .header{
     display: flex;
     flex-wrap: wrap;
@@ -8,9 +8,9 @@
     padding: 1em;
     background-color: $primaryColor;
     color: white;
-    font-size: 20px;
-    font-weight: 700;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    font-family:$font;
 }
 .sticky {
     position: fixed;
@@ -29,19 +29,60 @@ p a {
     text-decoration: none;
     cursor: pointer;
   }
-  
-  .header a:hover {
-      background-color: $hoverColor;
-      border-radius: 5px;
-      height: 100%;
-      width: 100%;
-  }
-  
-  .menu {
-      display:none
-  }
+  .hover9{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
 
+  }
+  .hover9:before, .hover9:after, .hover9__label:before, .hover9__label:after{
+    content: "";
+    position: absolute;
+    transition: transform .2s ease-out;
+  }
   
+  .hover9:before, .hover9:after{
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+  
+  .hover9:before{
+    top: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  
+  .hover9:after{
+    bottom: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  
+  .hover9__label:before, .hover9__label:after{
+    width: 2px;
+    height: 100%;
+    top: 0;
+  }
+  
+  .hover9__label:before{
+    left: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  
+  .hover9__label:after{
+    right: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  
+  .hover9:hover:before, .hover9:hover:after,
+  .hover9:hover .hover9__label:before, .hover9:hover .hover9__label:after,
+  .hover9:focus:before, .hover9:focus:after,
+  .hover9:focus .hover9__label:before, .hover9:focus .hover9__label:after{
+    transform: translate3d(0, 0, 0);
+  }
+  
+
 @media only screen and (max-width: 500px){
       .menu {
         display:block;
@@ -50,4 +91,149 @@ p a {
     .header a {
         display: none;
     }
+}
+
+.hover9:after, .hover9:before,
+.hover9__label:after, .hover9__label:before{
+  background-color: $hoverColor
+}
+
+
+.hover9:hover, .hover9:focus{
+  color: $hoverLetterColor
+}
+
+.hover9{
+  padding: .5rem 1.5rem;
+} 
+/*
+* demo
+*/
+
+@media screen and (min-width: 769px){
+
+  html{
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px){
+
+  html{
+    font-size: 56%;
+  }
+}
+
+@media screen and (max-width: 640px){
+
+  html{
+    font-size: 50%;
+  }
+}
+
+body{
+  font-family: "PT Sans", -apple-system, BlinkMacSystemFont, "Roboto", "Open Sans", "Helvetica Neue", "Segoe UI", "Arial", sans-serif;
+  font-size: 1.6rem;
+  color: #222;
+
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+}
+
+.section{
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+}
+
+.section:nth-child(2n+2){
+  background-color: #d5c093;
+}
+
+.title{
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: #fff;
+  padding: .5rem 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.4rem;
+  background-color: #ede6c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__link{
+  color: #222;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.footer__link:hover, .footer__link:focus{
+  color: #000;
+}
+
+/*
+* menu
+*/
+
+.menu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;  
+}
+
+.menu__item{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.menu__link{
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 1201px){
+
+  .main-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .section{
+    width: 33.33333%;
+  }
+}
+
+
+@media screen and (min-width: 640px){
+  form{
+  
+  }
+}
+
+@media screen and (max-width: 300px){
+
+  .header{
+    flex-direction: column;
+  }
 }
