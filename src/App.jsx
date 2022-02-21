@@ -1,6 +1,7 @@
 import "./App.css";
-import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import Form from "./components/Form/Form";
 import News from "./components/News/News";
 import { GlobalProvider } from "./context/GlobalState";
@@ -13,11 +14,12 @@ function App() {
         <Header/>
         <div className="container">
           <Routes>
-            <Route path="/" element={<Home/>} />
+            <Route path="/home" element={<Home/>} />
             <Route path="/form" element={<Form/>} />
             <Route path="/news" element={<News/>} />
           </Routes>
         </div>
+        <Footer/>
       </Router>
     </div>
     </GlobalProvider>

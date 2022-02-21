@@ -17,7 +17,6 @@ export const GlobalProvider = ({ children }) => {
         payload: res.data.results,
       });
     };
-  
     return (
       <GlobalContext.Provider
         value={{

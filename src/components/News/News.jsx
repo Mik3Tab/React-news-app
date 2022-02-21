@@ -16,7 +16,7 @@ import './News.scss';
               <p className="subsection_container">Subsection: {New.subsection.toUpperCase()}</p>
               <p className="abstract_container">{New.abstract}</p>
               <img src={New.multimedia[1].url} /><br/>
-              <a className="link_container" href="{New.url}">Link to the new</a>
+              <a className="link_container" href="{New.url}">Link</a>
             </div>
           );
         });
