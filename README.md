@@ -1,9 +1,10 @@
-# Getting Started with Create React App
+# Getting Started with this App
+You can start by cloning this project [git clone https://github.com/Mik3Tab/React-news-app.git]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Technologies used
+HTML, SASS, Javascript, React
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
@@ -39,31 +40,22 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Results of this project:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+-> You can save objects in Local Storage through a form
+-> In News, you can see NYT brought wuth an API New York Times
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+__Screenshots__
 
-### Code Splitting
+## Home
+![image](https://user-images.githubusercontent.com/93273286/155093631-af2b6d4c-149b-4c0f-940d-f31ec6e56575.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Form
+![image](https://user-images.githubusercontent.com/93273286/155093741-f49a8fff-c9ab-4d9c-9292-d8d44ef48640.png)
 
-### Analyzing the Bundle Size
+## News cards
+![image](https://user-images.githubusercontent.com/93273286/155094086-63769fb8-5317-4f2d-9e6b-52c69066fec3.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run build` fails to minify
 
